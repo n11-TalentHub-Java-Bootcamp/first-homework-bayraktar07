@@ -8,9 +8,9 @@
 
         <!-- Connection settings -->
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/n11_BOOTCAMP</property>
         <property name="hibernate.connection.username">postgres</property>
-        <property name="hibernate.connection.password">1231231234</property>
+        <property name="hibernate.connection.password">qweytr9009</property>
 
         <!-- SQL dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
@@ -24,6 +24,8 @@
         <!-- Annotated entity classes -->
         <mapping class="entity.Kategori"/>
         <mapping class="entity.Urun"/>
+        <mapping class="entity.Yorum"/>
+        <mapping class="entity.Kullanici"/>
 
     </session-factory>
 </hibernate-configuration>
