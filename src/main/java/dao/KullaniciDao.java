@@ -28,8 +28,8 @@ public class KullaniciDao extends BaseDao {
         String sql = " SELECT " +
                 " new dto.KullaniciYorumlarDto ( kullanici.id, kullanici.adi, urun.adi, yorum.yorum, yorum.date) " +
                 "FROM Kullanici kullanici " +
-                "INNER JOIN Yorum yorum on yorum.kullaniciId = kullanici.id " +
-                "INNER JOIN Urun urun on yorum.urunId = urun.id " +
+                "INNER JOIN Yorum yorum on yorum.kullanici.id = kullanici.id " +
+                "INNER JOIN Urun urun on yorum.urun.id = urun.id " +
                 "WHERE kullanici.id = :id";
 
         Query query = getCurrentSession().createQuery(sql);

@@ -30,10 +30,10 @@ public class YorumDao extends BaseDao {
                 " new dto.YorumDetayDto( urun.adi, kategori.adi, urun.fiyat, kullanici.adi, kullanici.soyadi, kullanici.email, kullanici.telefon, " +
                 "yorum.yorum, yorum.date) " +
                 " FROM Yorum yorum " +
-                " INNER JOIN Kullanici kullanici on yorum.kullaniciId = kullanici.id " +
-                " INNER JOIN Urun urun on yorum.urunId = urun.id " +
+                " INNER JOIN Kullanici kullanici on yorum.kullanici.id = kullanici.id " +
+                " INNER JOIN Urun urun on yorum.urun.id = urun.id " +
                 " INNER JOIN Kategori kategori  on urun.kategori.id = kategori.id " +
-                " WHERE yorum.urunId = :id";
+                " WHERE yorum.urun.id = :id";
 
 
         Query query = getCurrentSession().createQuery(sql);

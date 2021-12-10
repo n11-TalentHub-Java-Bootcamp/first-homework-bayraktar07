@@ -25,10 +25,20 @@ public class Yorum {
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
-    @Column(name = "URUN_ID", nullable = false)
-    private Long urunId;
+//
+//    @Column(name = "URUN_ID", nullable = false)
+//    private Long urunId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "URUN_ID", foreignKey = @ForeignKey(name = "FK_URUN_YORUM_ID"))
+    private Urun urun;
 
 
-    @Column(name = "KULLANICI_ID", nullable = false)
-    private Long kullaniciId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "KULLANICI_ID", foreignKey = @ForeignKey(name = "FK_KULLANICI_YORUM_ID"))
+    Kullanici kullanici;
+
+//
+//    @Column(name = "KULLANICI_ID", nullable = false)
+//    private Long kullaniciId;
 }
