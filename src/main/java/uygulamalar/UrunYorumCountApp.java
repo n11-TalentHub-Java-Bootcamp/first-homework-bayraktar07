@@ -13,7 +13,7 @@ public class UrunYorumCountApp {
         List<UrunYorumSayimDto> list = service.UrunListYorumCount();
 
         for(UrunYorumSayimDto l : list) {
-            System.out.println(l.toString());
+            System.out.println(l.urunSayimKontrolandToString());        // toString ile yorumSayisi 0 geliyor. urunSayimKontrolAndToString ile bos geliyor.
         }
     }
 }

@@ -48,6 +48,24 @@ public class UrunYorumSayimDto {
         this.yorumSayisi = yorumSayisi;
     }
 
+    public String urunSayimKontrolandToString () {
+
+        if(yorumSayisi == 0) {
+            return "UrunYorumSayimDto{" +
+                    "id=" + id +
+                    ", urunAdi='" + urunAdi + '\'' +
+                    ", fiyat=" + fiyat +
+                    ", yorumSayisi=" + " " +
+                    '}';
+        }
+        return "UrunYorumSayimDto{" +
+                "id=" + id +
+                ", urunAdi='" + urunAdi + '\'' +
+                ", fiyat=" + fiyat +
+                ", yorumSayisi=" + yorumSayisi +
+                '}';
+    }
+
     @Override
     public String toString() {
         return "UrunYorumSayimDto{" +

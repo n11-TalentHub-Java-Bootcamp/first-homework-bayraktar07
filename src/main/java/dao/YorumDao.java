@@ -49,9 +49,9 @@ public class YorumDao extends BaseDao {
         public List<UrunYorumSayimDto> UrunListYorumCount () {
 
         String sql = "SELECT " +
-                "new dto.UrunYorumSayimDto (urun.id, urun.adi, urun.fiyat, count(yorum.urunId)) " +
+                "new dto.UrunYorumSayimDto (urun.id, urun.adi, urun.fiyat, count(yorum.urun.id)) " +
                 "FROM Urun urun " +
-                "LEFT JOIN Yorum yorum on yorum.urunId = urun.id " +
+                "LEFT JOIN Yorum yorum on yorum.urun.id = urun.id " +
                 " GROUP BY urun.id " +
                 " ORDER BY urun.id ";
 

@@ -34,6 +34,8 @@ public class Yorum {
     private Urun urun;
 
 
+
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "KULLANICI_ID", foreignKey = @ForeignKey(name = "FK_KULLANICI_YORUM_ID"))
     Kullanici kullanici;
